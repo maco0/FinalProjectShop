@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var repeatpasswordEditText: EditText
     private lateinit var SignInButton: Button
     private lateinit var RegisterButton: Button
-
+    private lateinit var forgotPassword: Button
     private lateinit var mAuth : FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
         repeatpasswordEditText = findViewById(R.id.TextPasswordRepeat)
         SignInButton = findViewById(R.id.signInButton)
         RegisterButton = findViewById(R.id.RegisterButton)
+        forgotPassword = findViewById(R.id.ForgotPassword)
     }
 
     private fun RegisterListeners()
@@ -70,6 +71,9 @@ class LoginActivity : AppCompatActivity() {
           }
           }
         }
+        forgotPassword.setOnClickListener {
+            this.GoToForgotPasswordActivity()
+        }
 
     }
 
@@ -80,6 +84,10 @@ class LoginActivity : AppCompatActivity() {
 
     private fun SignInActivity(){
         startActivity(Intent(this,SignInActivity::class.java))
+    }
+
+    private fun GoToForgotPasswordActivity(){
+        startActivity(Intent(this,changePasswordActivity::class.java))
     }
 
 
