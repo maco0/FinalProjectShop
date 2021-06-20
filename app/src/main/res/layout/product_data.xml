@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        android:background="#4cc2a9">
+
+        <ImageView
+            android:id="@+id/productImageDisplay"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="2dp"
+            android:adjustViewBounds="true"
+            android:gravity="left"
+            android:scaleType="fitXY"
+            tools:srcCompat="@tools:sample/avatars"
+
+            />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#263324">
+
+            <TextView
+                android:id="@+id/producttag"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:text="aaa"
+                android:textStyle="bold"
+                android:background="#24332f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/productNameDisplay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/productImageDisplay"
+                android:layout_weight="2"
+                android:background="#4b615c"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="aaa"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/productDescDispay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="aaa bevri ogong"
+                android:background="#3d635b"
+                android:paddingBottom="30dp"
+                />
+
+            <TextView
+                android:id="@+id/ContactinformationDisplay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#4b615c"
+                android:gravity="center"
+                android:text="aaa s moedani"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

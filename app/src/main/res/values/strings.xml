@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">fireBaseProject</string>
+    <string-array name="tags">
+        <item>no Tag</item>
+        <item>music</item>
+        <item>computer parts</item>
+        <item>car parts</item>
+        <item>clothes</item>
+        <item>other</item>
+    </string-array>
 </resources>

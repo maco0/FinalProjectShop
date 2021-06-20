@@ -1,4 +1,4 @@
-package com.example.firebaseproject
+package com.example.firebaseproject.authfiles
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,8 @@ import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.firebaseproject.fragments.FragmentContainer
+import com.example.firebaseproject.R
 import com.google.firebase.auth.FirebaseAuth
 
 class SignInActivity : AppCompatActivity() {
@@ -34,7 +36,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun GoToMainPage() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, FragmentContainer::class.java))
         finish()
     }
 

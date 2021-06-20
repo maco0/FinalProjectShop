@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".authfiles.LoginActivity"
+    android:background="@color/cardview_dark_background">
 
     <EditText
         android:id="@+id/EmailAddress"
@@ -13,12 +14,31 @@
         android:layout_marginBottom="32dp"
         android:ems="10"
         android:hint="Email"
+        android:textColor="@color/white"
+        android:textColorHint="#009999"
+        android:textStyle="bold"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.32" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textColorHint="#009999"
+        app:layout_constraintBottom_toBottomOf="@+id/ForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
 
     <EditText
         android:id="@+id/TextPassword"
@@ -26,7 +46,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Password"
+        android:textStyle="bold"
         android:inputType="textPassword"
+        android:textColorHint="#009999"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/EmailAddress"
         app:layout_constraintStart_toStartOf="@+id/EmailAddress"
@@ -40,6 +63,9 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="Repeat Password"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textColorHint="#009999"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,10 +75,11 @@
     <Button
         android:id="@+id/RegisterButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:text="Register"
         android:textStyle="bold"
         android:textSize="20sp"
+        android:backgroundTint="@color/cardview_shadow_start_color"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +92,7 @@
         android:gravity="center_horizontal"
         android:text="Already have an Account?"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="#009999"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,41 +103,30 @@
 
     <Button
         android:id="@+id/signInButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/cardview_shadow_start_color"
         android:text="Sign in"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ForgotPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintVertical_bias="0.26" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Forgot password?"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInButton"
-        app:layout_constraintVertical_bias="0.100000024" />
 
     <Button
         android:id="@+id/ForgotPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="change password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="54dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="forgot password?"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

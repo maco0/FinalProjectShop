@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignInActivity">
+    tools:context=".authfiles.SignInActivity"
+    android:background="@color/cardview_dark_background">
 
     <EditText
         android:id="@+id/LoginEmailAdress"
@@ -12,6 +13,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="email"
+        android:textColor="@color/white"
+        android:textColorHint="#009999"
+        android:textStyle="bold"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,6 +29,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="password"
+        android:textColor="@color/white"
+        android:textColorHint="#009999"
+        android:textStyle="bold"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,8 +42,9 @@
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:text="Login"
+        android:backgroundTint="@color/cardview_shadow_start_color"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,9 +55,10 @@
 
     <Button
         android:id="@+id/BackButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
         android:text="Back"
+        android:backgroundTint="@color/cardview_shadow_start_color"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

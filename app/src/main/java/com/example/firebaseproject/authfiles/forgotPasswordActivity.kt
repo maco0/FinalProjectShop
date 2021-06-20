@@ -1,4 +1,4 @@
-package com.example.firebaseproject
+package com.example.firebaseproject.authfiles
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.firebaseproject.R
 import com.google.firebase.auth.FirebaseAuth
 
 class forgotPasswordActivity : AppCompatActivity() {
@@ -31,20 +32,20 @@ class forgotPasswordActivity : AppCompatActivity() {
                 Toast.makeText(this, "Wrong email", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-         mAuth.sendPasswordResetEmail(emailtext).addOnCompleteListener {task ->
-             if(task.isSuccessful){
-                 Toast.makeText(this, "Check email", Toast.LENGTH_SHORT).show()
-             }
-             else{
-                 Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
-             }
-         }
+            mAuth.sendPasswordResetEmail(emailtext).addOnCompleteListener {task ->
+                if(task.isSuccessful){
+                    Toast.makeText(this, "Check email", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
     private fun backButton(){
         back = findViewById(R.id.forgotPasswordBack)
         back.setOnClickListener {
-            startActivity(Intent(this,LoginActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
     }

@@ -1,12 +1,11 @@
-package com.example.firebaseproject
+package com.example.firebaseproject.authfiles
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
+import com.example.firebaseproject.R
 import com.google.firebase.auth.FirebaseAuth
 
 class changePasswordActivity : AppCompatActivity() {
@@ -31,27 +30,27 @@ class changePasswordActivity : AppCompatActivity() {
     }
 
     private  fun updatePassword(){
-      newPasswordButton.setOnClickListener {
-          val password = newPasswordText.text.toString()
-          if(password.isEmpty() || password.length < 9){
-              return@setOnClickListener
-          }
-          mAuth.currentUser?.updatePassword(password)?.addOnCompleteListener{
-              task ->
-              if(task.isSuccessful){
-                  Toast.makeText(this, "Password Changed", Toast.LENGTH_SHORT).show()
-              }
-              else{
-                  Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
-              }
-          }
-      }
+        newPasswordButton.setOnClickListener {
+            val password = newPasswordText.text.toString()
+            if(password.isEmpty() || password.length < 9){
+                Toast.makeText(this, "Password empty or shorter than 9 letters", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            mAuth.currentUser?.updatePassword(password)?.addOnCompleteListener{
+                task ->
+                if(task.isSuccessful){
+                    Toast.makeText(this, "Password Changed", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 
     private fun backButton(){
         passwordChangeBack.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
-            finish()
+            onBackPressed()
         }
     }
 }
