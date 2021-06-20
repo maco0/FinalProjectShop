@@ -23,7 +23,7 @@ there is also button with text that says ALL , by clicking that button you get a
 ---------------
 this application is made in android studio with kotlin. 
 it is connected to Firebase and has imported Navigation component.
-the app itself combines several activities as well as fragments. in manifets, firtly displayed activity is LoginActivity, this activity has several attributes and is using Firebase Auth and 
+the app itself combines several activities as well as fragments. in manifets, firstly displayed activity is LoginActivity, this activity has several attributes and is using Firebase Auth and 
 Firebase DataBaseReference. we need these to create new user and store his/her name in database. this activity is connected to several other activities such as SignInActivity and forgotPasswordActivity
 they all use Firebase Auth, to actually check if we already have that user in Authentication part of firebase(SignInActivity), and also we need to inform user email if he/she forgot password and is willing to
 change it.
